@@ -7,7 +7,7 @@ import java.util.Enumeration;
 import java.util.Date;
 
 public class Tester {
-
+	public static String test_URL="http://smartcarpet.website/SQLtest.php";
 	public static int current_delay = 0;
 	public static float current_ram = 0;
 	public static int network_fail_retry = 0;
@@ -72,7 +72,7 @@ public class Tester {
 
 	public static int getNetworkDelayMS(){
 		long startTime=System.currentTimeMillis();
-		String httpResult = HttpRequest.sendGet("http://smartcarpet.website/SQLtest.php", "");
+		String httpResult = HttpRequest.sendGet(test_URL, "");
 		long endTime=System.currentTimeMillis();
 		if(!httpResult.contains("Error")){
 			System.out.println(httpResult);
